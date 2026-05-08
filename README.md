@@ -45,16 +45,10 @@ cp -r dcf-valuation-skill ~/.agents/skills/dcf
 openclaw gateway restart
 ```
 
-### 方式二：从 .skill 文件安装
+### 方式二：从 clawhub.ai 安装（推荐）
 
 ```bash
-openclaw skills install ./dcf-valuation-skill/dcf-valuation.skill
-```
-
-### 方式三：从 clawhub.ai 安装（推荐）
-
-```bash
-openclaw skills install dcf-valuation-skill
+openclaw skills install dcf-valuation
 ```
 
 ### 方式四：从 Claude Code 安装
@@ -162,12 +156,12 @@ git clone https://github.com/ianzheng001/dcf-valuation-skill.git dcf
 
 ```
 dcf-valuation-skill/
-├── SKILL.md                    # Agent Skill 核心文件
-├── dcf-valuation.skill         # 打包后的分发文件
+├── SKILL.md                   # Agent Skill 核心文件
+├── README.md                  # 本文件
 ├── references/
-│   └── qualitative.md          # 定性分析完整框架
+│   └── qualitative.md         # 定性分析完整框架
 └── scripts/
-    └── dcf_calc.py            # DCF计算脚本
+    └── dcf_calc.py           # DCF计算脚本
 ```
 
 ---
