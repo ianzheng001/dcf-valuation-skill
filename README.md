@@ -84,66 +84,6 @@ git clone https://github.com/ianzheng001/dcf-valuation-skill.git dcf
 /dcf 分析贝泰妮的十年估值
 ```
 
-### 手动运行计算脚本
-
-```bash
-python3 scripts/dcf_calc.py --json '{
-  "stock_name": "贵州茅台",
-  "base_revenue": 1720.5,
-  "base_profit": 823.2,
-  "net_cash": 1500,
-  "total_shares": 12.52,
-  "current_market_cap": 17219,
-  "current_price": 1375,
-  "dividend_ratio": 0.75,
-  "scenarios": {
-    "保守": {
-      "revenue_growth": [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05],
-      "net_margin": [0.48, 0.48, 0.48, 0.48, 0.48, 0.48, 0.48, 0.48, 0.48, 0.48],
-      "fcf_ratio": 0.90,
-      "discount_rate": 0.10,
-      "terminal_growth": 0.03
-    },
-    "中性": {
-      "revenue_growth": [0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08],
-      "net_margin": [0.50, 0.50, 0.50, 0.50, 0.50, 0.50, 0.50, 0.50, 0.50, 0.50],
-      "fcf_ratio": 0.92,
-      "discount_rate": 0.09,
-      "terminal_growth": 0.04
-    },
-    "乐观": {
-      "revenue_growth": [0.12, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10],
-      "net_margin": [0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52],
-      "fcf_ratio": 0.95,
-      "discount_rate": 0.08,
-      "terminal_growth": 0.04
-    }
-  },
-  "pe_exit_scenarios": {
-    "保守": {
-      "profit_growth": [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05],
-      "exit_pe": 20,
-      "discount_rate": 0.03,
-      "dividend_ratio": 0.75
-    },
-    "中性": {
-      "profit_growth": [0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08],
-      "exit_pe": 25,
-      "discount_rate": 0.015,
-      "dividend_ratio": 0.80
-    },
-    "乐观": {
-      "profit_growth": [0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10],
-      "exit_pe": 30,
-      "discount_rate": 0.015,
-      "dividend_ratio": 0.85
-    }
-  }
-}'
-```
-
----
-
 ## 核心参数说明
 
 ### 传统DCF 参数
