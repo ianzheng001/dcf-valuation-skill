@@ -59,7 +59,7 @@ openclaw skills install dcf-valuation-skill
 
 ### 方式四：从 Claude Code 安装
 
-[Claude Code](https://github.com/anthropics/claude-code) 基于 OpenClaw 构建，skill 存放路径相同：
+[Claude Code](https://github.com/anthropics/claude-code) 的 skill 安装方式：
 
 ```bash
 # 克隆仓库到 Claude Code 的 skills 目录
@@ -68,11 +68,6 @@ cd ~/.claude-agents/skills
 git clone https://github.com/ianzheng001/dcf-valuation-skill.git dcf
 
 # 重启 Claude Code 即可生效
-```
-
-或者手动复制已下载的仓库：
-```bash
-cp -r /path/to/dcf-valuation-skill ~/.claude-agents/skills/dcf
 ```
 
 ---
