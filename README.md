@@ -51,11 +51,35 @@ openclaw gateway restart
 openclaw skills install ./dcf-valuation-skill/dcf-valuation.skill
 ```
 
-### 方式三：从 clawhub.ai 安装（待发布）
+### 方式三：从 clawhub.ai 安装（推荐）
 
 ```bash
 openclaw skills install dcf-valuation-skill
 ```
+
+### 方式四：从 Claude Code 安装
+
+如果你使用 [Claude Code](https://github.com/anthropics/claude-code)，可以通过以下方式安装：
+
+**方法A：链接 GitHub 仓库（推荐）**
+
+在 `~/.claude-agents/skills/` 目录下克隆仓库：
+
+```bash
+mkdir -p ~/.claude-agents/skills
+cd ~/.claude-agents/skills
+git clone https://github.com/ianzheng001/dcf-valuation-skill.git dcf-valuation
+```
+
+**方法B：使用 .skill 文件安装**
+
+下载仓库中的 `dcf-valuation.skill` 文件，然后：
+
+```bash
+openclaw skills install /path/to/dcf-valuation.skill
+```
+
+安装后重启 Claude Code 即可生效。
 
 ---
 
